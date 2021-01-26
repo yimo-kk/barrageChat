@@ -34,3 +34,14 @@ export function getGroupData (params) {
     data: qs.stringify(params)
   })
 }
+/**
+ *  获取群聊记录
+ * @param {*} params
+ */
+export function getGroupChatLog (params) {
+  return Axios({
+    url: `/chat/getGroupChatLog`,
+    method: "post",
+    data: qs.stringify(params)
+  });
+}

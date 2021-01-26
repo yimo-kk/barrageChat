@@ -1,5 +1,6 @@
 import axios from "axios";
 const baseUrl = 'https://server.nikidigital.net';
+// const baseUrl = 'https://server.customerchat.org';
 axios.defaults.baseURL = baseUrl;
 axios.defaults.timeout = 50000;
 axios.defaults.headers = {
