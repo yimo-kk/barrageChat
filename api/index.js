@@ -5,7 +5,6 @@ import qs from "qs";
  * @param {*} params
  */
 export function userDecode (params) {
-  console.log(params)
   return Axios({
     url: `/chat/userDecode`,
     method: "post",

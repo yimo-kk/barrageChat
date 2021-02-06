@@ -39,9 +39,9 @@ socket.on('groupMsg', (data) => {
   data.content = data.message
   danmuPool.push(data)
 })
-let btn = document.getElementById("barrageChatjs").getAttribute("button")
-let input = document.getElementById("barrageChatjs").getAttribute("input")
-let box = document.getElementById("barrageChatjs").getAttribute("box")
+let btn = document.getElementById("barrageChatjs").getAttribute("sendBtn")
+let input = document.getElementById("barrageChatjs").getAttribute("sendInput")
+let box = document.getElementById("barrageChatjs").getAttribute("barrageChat")
 if (!btn) {
   throw new Error('Please pass in the button id, button attribute') // 请传入按钮id,button属性
 }

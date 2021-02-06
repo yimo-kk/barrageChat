@@ -1,6 +1,6 @@
 import axios from "axios";
-const baseUrl = 'https://server.nikidigital.net';
-// const baseUrl = 'https://server.customerchat.org';
+// const baseUrl = 'https://server.nikidigital.net';
+const baseUrl = 'https://server.customerchat.org';
 axios.defaults.baseURL = baseUrl;
 axios.defaults.timeout = 50000;
 axios.defaults.headers = {
@@ -9,7 +9,7 @@ axios.defaults.headers = {
 // 添加请求拦截器
 axios.interceptors.request.use(
   function (config) {
-    // 在发送请求之前做些什
+    // 在发送请求之前做些什么
     return config;
   },
   function (error) {

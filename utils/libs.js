@@ -63,3 +63,9 @@ export function createUserName () {
   var rand = GetRandomNum(10000, 99999); //随机数字
   return letter + fullYear + rand;
 }
+// 生成随机字符串
+function GetRandomNum (Min, Max) {
+  var Range = Max - Min;
+  var Rand = Math.random();
+  return Min + Math.round(Rand * Range);
+}
