@@ -69,3 +69,69 @@ function GetRandomNum (Min, Max) {
   var Rand = Math.random();
   return Min + Math.round(Rand * Range);
 }
+/**
+ * 判断是否是是iE
+ */
+export function isIE () {
+  if (!!window.ActiveXObject || "ActiveXObject" in window) {
+    return true;
+  } else {
+    return false;
+  }
+}
+/**
+ * 翻转只服从 表情([])不反转
+ */
+
+export function overturn (text) {
+  let result = ""
+  let temp = "";
+  for (let i = text.length - 1; i >= 0; i--) {
+    let ch = text[i];
+    if (ch === ']') {
+      result += temp;
+      temp = "";
+      let nextSymbolIndex = -1;
+      let isOdd = false;
+      for (let j = i; j >= 0; j--) {
+        if (text[j] === '[') {
+          nextSymbolIndex = j;
+          break;
+        } else if (j < i && text[j] === ']') {
+          isOdd = true;
+          result += text.substring(j + 1, i).reverse()
+          i = j + 1;
+          break;
+        }
+      }
+      if (nextSymbolIndex !== -1) {
+        result += (text.substring(nextSymbolIndex, i + 1));
+        i = nextSymbolIndex;
+      } else if (!isOdd) {
+        result += text.substring(0, i).reverse()
+      }
+    } else {
+      temp += ch;
+    }
+
+  }
+
+  if (temp.length > 0) {
+    result += temp;
+  }
+  return result;
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+

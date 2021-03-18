@@ -1,20 +1,117 @@
 /* @import './utils/face/emjoy.css'; */
+
 .right {
   position: absolute;
   visibility: hidden;
-  white-space: nowrap;
+  /* white-space: nowrap; */
+  max-width: 90%;
   /* transform: translateX(700px); */
 }
 
 .left {
   position: absolute;
-  white-space: nowrap;
+  /* white-space: nowrap; */
   user-select: none;
   transition: transform 10s linear;
   /* 时间相同 越长的弹幕滑动距离越长 所以越快~ */
 }
+/**
+语音动画
+*/
+.record_content {
+  display: flex;
+  align-items: center;
+}
+.time {
+  font-size: 16px;
+  min-width: 24px;
+  margin-left: 10px;
+}
+.small {
+  width: 16px;
+  height: 15px;
+  border-style: solid;
+  border-top-color: transparent;
+  border-left-color: transparent;
+  border-bottom-color: transparent;
+  border-radius: 50%;
+  box-sizing: border-box;
+  vertical-align: middle;
+  display: inline-block;
+  color: #a2a2a2;
+  border-width: 1px;
+}
 
-/*  */
+.middle {
+  width: 28px;
+  height: 24px;
+  border-style: solid;
+  border-top-color: transparent;
+  border-left-color: transparent;
+  border-bottom-color: transparent;
+  border-radius: 50%;
+  box-sizing: border-box;
+  vertical-align: middle;
+  display: inline-block;
+  margin-left: -22px;
+  animation: show2 3s ease-in-out infinite;
+  opacity: 1;
+  color: #a2a2a2;
+  border-width: 1px;
+}
+@keyframes show2 {
+  0% {
+    opacity: 0;
+  }
+  30% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+.cricleplay {
+  width: 2.5rem;
+}
+
+.different {
+  transform: rotate(180deg);
+}
+.large {
+  width: 39px;
+  height: 34px;
+  border-style: solid;
+  border-top-color: transparent;
+  border-left-color: transparent;
+  border-bottom-color: transparent;
+  border-radius: 50%;
+  box-sizing: border-box;
+  vertical-align: middle;
+  display: inline-block;
+  margin-left: -32px;
+  animation: show3 3s ease-in-out infinite;
+  opacity: 1;
+  color: #a2a2a2;
+  border-width: 1px;
+}
+@keyframes show3 {
+  0% {
+    opacity: 0;
+  }
+  60% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+.stopanimate {
+  -moz-animation-name: none;
+  -webkit-animation-name: none;
+  -ms-animation-name: none;
+  animation-name: none;
+}
+/* 表情 */
 .emoji_a,.emoji_b{
   width: 21px;
   height: 21px;

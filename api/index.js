@@ -44,3 +44,17 @@ export function getGroupChatLog (params) {
     data: qs.stringify(params)
   });
 }
+/**
+ * 聊天时上传语音
+ * @param {*} params
+ */
+export function uploadVoice ({ params, seller_code }) {
+  return Axios({
+    url: `/chat/uploadVoice?u=${seller_code}`,
+    headers: {
+      "Content-Type": "multipart/form-data"
+    },
+    method: "post",
+    data: params
+  });
+}
